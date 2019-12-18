@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Docker Documentation Page</title>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+    <div id="main-container">
+      <div id="navbar-container">
+		<nav id="navbar">
+      <header class="header-title">Docker Documentation</header>
+			<ul id="list-of-sections">
+				<li><a class="nav-link" href="#Introduction">Introduction</a></li>
+				<li><a class="nav-link" href="#Why_Docker">Why Docker</a></li>
+				<li><a class="nav-link" href="#How_to_Install">How to Install</a></li>
+				<li><a class="nav-link" href="#Build_a_Spring_Boot_project">Build a Spring Boot project</a></li>
+
+				<li><a class="nav-link" href="#Create_a_Docker_ID">Create a Docker ID</a></li>
+
+				<li><a class="nav-link" href="#References">References</a></li>
+			</ul>
+		</nav>
+  </div>
+  <div id="main-doc-container">
+		<main id="main-doc">
+			<!-- INTRODUCTION SECTION-->
+			<section class="main-section" id="Introduction">
+				<header class="header-title">Introduction</header>
+				<p class="passages">
+					<ol>
+						Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating-system kernel and are thus more lightweight than virtual machines.
+						The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc.
+					</ol>
+				</p>
+			</section>
+			<!--THE END OF INTRODUCTION SECTION -->
+
+			<!-- WHY PYTHON SECTION-->
+			<section class="main-section" id="Why_Docker">
+				<header class="header-title">Why Docker</header>
+				<p class="passages">
+					<ol>
+            Innovation in today’s organizations comes from software, where all companies are becoming software companies and need to empower their developers to deliver new customer experiences quickly.Innovation can come in many different application formats—from traditional, monolithic applications to cloud-native and 12-factor applications.These applications must also be able to run across hybrid/multi-cloud and out to the edge. Docker enables organizations to achieve these goals by providing the only end-to-end (desktop to the data center) experience for developing and scaling distributed applications while leveraging the processes, people and tools that they have in place today. In addition to building and running applications, the Docker Platform provides end-to-edge security at scale, without slowing down innovation with automated governance and compliance throughout the application lifecycle.<br>Why do large companies like ING, Paypal, ADP and Spotify keep using Docker? Why is the adoption of docker growing so fast? Let’s go over the top advantages of docker to better understand it.
+            <li>Return on investment & cost savings <br>
+
+The first advantage of using docker is the ROI. The biggest driver of most management decisions when selecting a new product is the return on investment. The more a solution can drive down costs while raising profits, the better the solution is, especially for large, established companies, that need to generate steady revenue on the long term.
+In this sense, Docker can help facilitate this type of savings by dramatically reducing infrastructure resources. The nature of Docker is that fewer resources are necessary to run the same application. Because of the reduced infrastructure requirements that Docker has, organizations are able to save on everything from server costs to the employees needed to maintain them. Docker allows engineering teams to be smaller and more effective.</li>
+            <li>CI efficiency<br>
+
+Docker enables you to build a container image and use that same image across every step of the deployment process. A huge benefit of this is the ability to separate non-dependent steps and run them in parallel. The length of time it takes from build to production can be sped up notably.</li>
+            <li> Compatibility & maintainability<br>
+
+Eliminate the “it works on my machine” problem once and for all. One of the benefits that the entire team will appreciate is parity. Parity, in terms of Docker, means that your images run the same no matter which server or whose laptop they are running on. For your developers, this means less time spent setting up environments, debugging environment-specific issues, and a more portable and easy-to-set-up codebase. Parity also means your production infrastructure will be more reliable and easier to maintain.</li>
+				</ol>
+				</p>
+			</section>
+		<!-- END OF WHY PYTHON SECTION -->
+
+		<!--HELLO WORLD-->
+		<section class="main-section" id="How_to_Install">
+			<header class="header-title" >How to Install</header>
+			<p class="passages">
+        <!--CODE PART GOES HERE-->
+	<p>
+					<ol>
+						Docker Assemble requires its own buildkit instance to be running in a Docker container on the local system. You can start and manage the backend using the backend subcommand of docker assemble.
+						To start the backend, run:
+					</ol>
+				</p>
+				<pre><code>
+	~$ docker assemble backend start`
+	Pulling image «…»: Success
+	Started backend container "docker-assemble-backend-username" (3e627bb365a4)
+				</code></pre>
+			</p>
+		</section>
+		<!--END OF HELLO WORLD SECTION-->
+
+	<!--VARIABLE SECTION -->
+		<section class="main-section" id="Build_a_Spring_Boot_project">
+			<header  class="header-title">Build a Spring Boot project</header>
+			<p class="passages">
+        <span class="subtitle">Steps: </span><br>
+        <ol>
+					<li>Ensure you are running the backend before you build any projects using Docker Assemble. For instructions on running the backend, see Install Docker Assemble.Clone the git repository you would like to use. The following example uses the docker-springfamework repository.</li>
+					<pre><code>
+	~$ git clone https://github.com/anokun7/docker-springframework
+	Cloning into 'docker-springframework'...
+	«…»
+				</code></pre>
+      </p>
+				<p class="passages">
+							<li>When you build a Spring Boot project, Docker Assemble automatically detects the information it requires from the pom.xml project file.Build the project using the docker assemble build command by passing it the path to the source repository:</li>
+			</p>
+					<pre><code>
+	~$ docker assemble build docker-springframework
+	«…»
+	Successfully built: docker.io/library/hello-boot:1
+					</code></pre>
+      </ol>
+				</p>
+		</section>
+	<!-- END OF VARIABLES SECTION -->
+
+
+
+				<!--IF ELSE SECTION-->
+				<section class="main-section" id="Create_a_Docker_ID">
+					<header  class="header-title">Create a Docker ID</header>
+					<p class="passages">
+						<pre><code>
+  Go to : https://hub.docker.com/signup
+						</code></pre><br>
+						<pre><code>
+  Follow instructions
+						</code></pre><br>
+          </p>
+				</section>
+          <!-- END OF IF ELSE STATEMENT-->
+
+
+
+			<section class="main-section" id="References">
+				<header class="header-title" >References</header><br>
+				<p class="passages" id="resources">
+					<a href="https://www.docker.com/" target="_blank" title="Docker Offical Website">Docker Offical Website</a><br>
+          <a href="https://docs.docker.com/" title="Docker documentation">Docker Documentation</a><br>
+          <a href="https://en.wikipedia.org/wiki/Docker_(software)" title="Docker Wikipedia" target="_blank">Docker (Wikipedia)</a><br>
+				</p>
+	</section>
+		</main>
+    </div>
+  </div>
+  <div id="top"><a href="#navbar">TOP&nbsp;&uarr;</a></div>
+	</body>
+</html>
